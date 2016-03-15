@@ -10,6 +10,8 @@ var $container, $blog_container;
 	/* DOCUMENT LOAD */
 	$(function() {
 
+		$.backstretch("images/background.jpg");
+
 
 		// ------------------------------
 		// start loader
