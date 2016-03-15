@@ -4,20 +4,37 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+	<h1 class="text-center">A world of wonders.</h1>
+	<p class="text-center">Eu sunt Radu si acesta este portofoliul meu. Daca doresti, ma poti contacta folosind <a href="{{"/contact.html" | prepend: site.baseurl}}" title="{{site.title}}"> acest formular</a>.
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<br />
+	<hr />
+	<br />
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  	<!-- <h1 class="page-heading">Works</h1> -->
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	<!-- <div class="row">
+	{% for post in site.posts %}
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+	    	<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+	    	<h2 class="text-center">
+	      		<a class="post-link ajax" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	    	</h2>
+	  	</div>
+	{% endfor %}
+	</div> -->
+
+	<div class="row">
+		{% assign projects = site.data.projects | get_projects_from_files | sort:'date' %}
+		{% for project in projects reversed %}
+		    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			    <a class="post-link ajax" href="/{{ project.dir }}">
+			        <img src="{{ project.image.url | replace:'.png', '-thumb.png' }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
+			        <h2 class="text-center project-thumb-title">{{ project.title }}</h2>
+			    </a>
+		   	</div>
+		{% endfor %}
+	</div>
 
 </div>

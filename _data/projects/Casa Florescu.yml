@@ -1,0 +1,16 @@
+title: Casa Florescu
+tagline: Cazare la Busteni
+client: Casa Florescu
+link: http://www.casaflorescu.ro
+nice_url: www.casaflorescu.ro
+category: portofoliu
+description: |
+   Site de prezentare pentru Casa Florescu, o pensiune situata in inima statiunii Busteni, intr-o pozitie privilegiata.
+   Pensiunea este pregatita sa intampine turistii care cauta cazare in Busteni cu 8 camere si 2 apartamente, toate dotate cu aer conditionat, televizor si wireless. In plus, oaspetii au access la bucatarie si o curte cu vedere deosebita.
+
+image:
+    url: /images/Pensiunea Casa Florescu - Cazare la Busteni.png
+    title: "Pensiunea Casa Florescu - Cazare la Busteni"
+    alt: Pensiunea Casa Florescu - Cazare la Busteni
+servicii:
+        - Web Design

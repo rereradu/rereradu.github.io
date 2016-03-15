@@ -1,0 +1,35 @@
+---
+layout: work
+---
+<article class="post work" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+  	<div class="row">
+	  	<div class="col-md-10">
+	    	<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+	    	<p class="lead">{{page.tagline}}</p>
+	    </div>
+	    <div class="col-md-2">
+	    	<a class="button back" href="#"></a>
+	    </div>
+    </div>
+    <hr />
+    <div class="row">
+	    <div class="col-sm-12 col-md-4">
+	    	<p><strong>Servicii</strong><br />{{page.servicii}}</p>
+	    </div>
+	    <div class="col-sm-12 col-md-4">
+	    	<p><strong>Client</strong><br />{{page.client}}</p>
+	    </div>
+	    <div class="col-sm-12 col-md-4">
+	    	<p><strong>URL Proiect</strong><br /><a href="{{page.url_client}}" title="{{page.title}} - {{page.tagline}}" target="_blank">{{page.nice_url}}</a></p>
+	    </div>
+	</div>
+	<hr />
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>

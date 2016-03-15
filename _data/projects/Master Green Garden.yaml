@@ -1,0 +1,18 @@
+title: Master Green Garden
+tagline: Amenajari Spatii Verzi
+client: Master Green Garden
+link: http://www.amenajari-spatiiverzi.ro
+nice_url: www.amenajari-spatiiverzi.ro
+category: portofoliu
+description: |
+   Site de prezentare pentru Master Green Garden, firma ce ofera servicii complete de proiectare, amenajare si intretinere pentru gradina, amenajari parcuri si toaletari arbori.
+
+image:
+    url: /images/Amenajari Spatii Verzi - Master Green Garden.png
+    title: "Master Green Garden - Amenajari Spatii Verzi"
+    alt: Master Green Garden, Amenajari Spatii Verzi - Servicii complete de proiectare, amenajare şi întreţinere pentru gradina ta
+servicii:
+        - CMS
+        - Dezvoltare Web
+        - SEO
+        - Web Design

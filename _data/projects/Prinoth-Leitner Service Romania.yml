@@ -1,0 +1,17 @@
+title: Prinoth Leitner Service Romania
+tagline: Service și asistență tehnică pentru instalații pe cablu și mașini de bătut zăpada
+client: SC Variant M SRL
+link: http://www.prinoth-leitner-service.ro/
+nice_url: www.prinoth-leitner-service.ro
+category: portofoliu
+description: |
+   Principala provocare pentru acest site aparent simplu a fost crearea unui formular customizat pentru cereri de asistenta sau service. Completat corect, formularul trimite automat un invoice in format .pdf atat detinatorului site-ului cat si clientului care solicita service sau asistenta tehnica pentru instalatiile Leitner sau utilajele Prinoth.
+
+image:
+    url: /images/Prinoth Leitner Romania - Asistenta tehnica,.png
+    title: "Prinoth Leitner Service România - Service și asistență tehnică pentru instalații pe cablu și mașini de bătut zăpada"
+    alt: Prinoth Leitner Service România - Service și asistență tehnică pentru instalații pe cablu și mașini de bătut zăpada
+servicii:
+        - Dezvoltare Web
+        - SEO
+        - Web Design
