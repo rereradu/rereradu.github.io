@@ -10,7 +10,7 @@ var $container, $blog_container;
 	/* DOCUMENT LOAD */
 	$(function() {
 
-		$.backstretch("images/background.jpg");
+		//$.backstretch("images/background.jpg");
 
 
 		// ------------------------------
@@ -729,7 +729,7 @@ var $container, $blog_container;
 				setup();
 
 				if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
-				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).show();
+				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).css({"min-height" : $("body").height()}).show();
 				} else { //old browser
 					p.fadeIn();
 				}
@@ -758,7 +758,7 @@ var $container, $blog_container;
 
 		if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
 			pActive.removeClass('animated '+ inAnimation).addClass('animated '+ outAnimation);
-			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty(); } ,1010)
+			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty().css({"min-height" : ""}); } ,1010)
 		} else { //old browser
 			pActive.fadeOut().empty();
 		}
