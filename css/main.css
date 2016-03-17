@@ -7,6 +7,10 @@ dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
 
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll; }
+
 /**
  * Basic styling
  */
@@ -66,10 +70,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #00FF97;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #00b36a; }
   a:hover {
     color: #111;
     text-decoration: underline; }
@@ -148,7 +152,7 @@ pre {
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid #e8e8e8;
+  /*border-bottom: 1px solid $grey-color-light;*/
   min-height: 56px;
   position: relative; }
 
@@ -160,7 +164,7 @@ pre {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #ffffff; }
 
 .site-nav {
   float: right;
@@ -168,7 +172,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: #ffffff;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -216,7 +220,8 @@ pre {
 
 .footer-heading {
   font-size: 18px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  color: #ffffff; }
 
 .contact-list,
 .social-media-list {
@@ -455,9 +460,16 @@ pre {
   .highlight .il {
     color: #099; }
 
-.post-link img {
-  display: block;
-  margin: 0 auto; }
+.post-link {
+  color: #fff; }
+  .post-link img {
+    display: block;
+    margin: 0 auto;
+    border: 15px solid #fff;
+    border-radius: 2px; }
+  .post-link:hover {
+    color: #00FF97;
+    text-decoration: none; }
 
 .work .post-content p:first-child {
   margin-bottom: 30px; }
@@ -483,7 +495,7 @@ pre {
   height: auto;
   min-height: 100%;
   overflow: auto;
-  background: #fff; }
+  background: none; }
 
 .button.back {
   display: inline-block;
@@ -527,4 +539,21 @@ pre {
   text-decoration: none; }
 
 .project-thumb-title {
-  font-size: 18px; }
+  font-size: 18px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 1px 1px 1px #111; }
+
+.intro {
+  color: #fff; }
+  p.intro {
+    margin-bottom: 2em; }
+
+.container.works, .container.page {
+  background: #fff; }
+.container.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* Yep! */ }
