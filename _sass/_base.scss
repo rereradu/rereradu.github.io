@@ -9,6 +9,10 @@ dl, dd, ol, ul, figure {
 }
 
 
+html {
+overflow: -moz-scrollbars-vertical; 
+overflow-y: scroll;
+}
 
 /**
  * Basic styling
@@ -99,7 +103,7 @@ a {
     }
 
     &:hover {
-        color: $text-color;
+        color: $white-color;
         text-decoration: underline;
     }
 }
