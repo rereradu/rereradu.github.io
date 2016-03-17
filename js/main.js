@@ -768,7 +768,7 @@ var $container, $blog_container;
 				setup();
 
 				if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
-				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).css({"min-height" : $("body").height()}).show();
+				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).show();
 				$(".page-content").add(".site-footer").hide();
 				} else { //old browser
 					p.fadeIn();
@@ -857,7 +857,7 @@ var $container, $blog_container;
 
 		if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
 			pActive.removeClass('animated '+ inAnimation).addClass('animated '+ outAnimation);
-			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty().css({"min-height" : ""}); } ,500)
+			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty(); } ,500)
 			$(".page-content").add(".site-footer").show();
 		} else { //old browser
 			pActive.fadeOut().empty().css({"min-height" : ""});
