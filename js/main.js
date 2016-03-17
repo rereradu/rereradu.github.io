@@ -144,7 +144,6 @@ var $container, $blog_container;
 						if ($.address.path().indexOf("/")!=-1) {
 							if(prevUrl != -1) {
 								hideProjectDetails(true,false);
-								//console.log('inchide 1');
 							} else {
 								hideProjectDetails(true,true);
 							}
@@ -356,6 +355,44 @@ var $container, $blog_container;
 	// ------------------------------
 	// SETUP : plugins
 	function setup() {
+
+
+
+		if($('.validate-form').length) {
+			$('.validate-form').validate({
+				rules : {
+					name: "required",
+					email: {
+						email: true,
+						required: true
+					}
+				},
+				messages: {
+					name: "Mama mi-a spus sa nu vorbesc cu strainii.",
+					email: {
+						required: "A sunat secolul 20. Vrea sa iti ofere o adresa de email.",
+						email: "<a href='http://www.internethalloffame.org/inductees/raymond-tomlinson'>Ray Tomlinson</a> se rasuceste in mormant acum."
+					}
+				},
+				highlight: function(element) {
+			       	$(element).closest('.form-group').addClass('has-error');
+			   	},
+			   	unhighlight: function(element) {
+			       	$(element).closest('.form-group').removeClass('has-error');
+			   	},
+			   	errorElement: "span",
+		   	    errorClass: 'help-block',
+		   	    errorPlacement: function(error, element) {
+		   	        if(element.parent('.input-group').length) {
+		   	            error.insertAfter(element.parent());
+		   	        } else {
+		   	            error.insertAfter(element);
+		   	        }
+		   	    }
+			});
+		}
+
+
 		// ------------------------------
 		// LIGHTBOX
 		setupLigtbox();
@@ -743,7 +780,6 @@ var $container, $blog_container;
 
 			p.on("click", function(e){
 				var container = $(".container.works");
-				//console.log(!container.is(e.target) && container.has(e.target).length == 0);
 				if (!container.is(e.target)  && container.has(e.target).length == 0) {
 					$.address.path("/");
 					$("body").scrollTop(0);
@@ -792,8 +828,7 @@ var $container, $blog_container;
 			});
 
 			p.on("click", function(e){
-				var container = $(".container.page");
-				//console.log(!container.is(e.target) && container.has(e.target).length == 0);
+				var container = $(".container.page.center");
 				if (!container.is(e.target)  && container.has(e.target).length == 0) {
 					$.address.path("/");
 					$("body").scrollTop(0);
@@ -824,11 +859,11 @@ var $container, $blog_container;
 			pActive.removeClass('animated '+ inAnimation).addClass('animated '+ outAnimation);
 			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty().css({"min-height" : ""}); } ,500)
 			$(".page-content").add(".site-footer").show();
-			//console.log("hidden");
 		} else { //old browser
 			pActive.fadeOut().empty().css({"min-height" : ""});
 			$(".page-content").add(".site-footer").show();
 		}
+		pActive.off("click");
 	}
 
 	function giveDetailUrl() {
