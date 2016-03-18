@@ -26,7 +26,7 @@ layout: default
 		{% for project in projects reversed %}
 		    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 			    <a class="post-link ajax" href="/{{ project.dir }}">
-			        <img src="{{ project.image.url | replace:'.png', '-thumb.png' }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
+			        <img src="{{ project.image.url | replace:'.jpg', '-thumb.jpg' }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
 			        <h2 class="text-center project-thumb-title">{{ project.title }}</h2>
 			    </a>
 		   	</div>

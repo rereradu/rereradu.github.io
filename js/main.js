@@ -10,7 +10,7 @@ var $container, $blog_container;
 	/* DOCUMENT LOAD */
 	$(function() {
 
-		$.backstretch("images/city-cars-traffic-lights.jpeg");
+		$.backstretch("images/background.jpg");
 
 
 		// ------------------------------

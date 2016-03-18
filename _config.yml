@@ -23,8 +23,8 @@ related_project_keys: ["servicii"]
 related_min_common: 0.7
 
 gallerytag:
-    dir: images
-    url: /images
+    dir: images/projects
+    url: /images/projects
     thumb_width: 420
     thumb_height: 260
     columns: 4
