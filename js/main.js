@@ -758,7 +758,7 @@ var $container, $blog_container;
 			NProgress.set(0.5);
 
 			// wait for images to be loaded
-			p.imagesLoaded(function() {
+			// p.imagesLoaded(function() {
 
 				hideLoader();
 
@@ -780,7 +780,7 @@ var $container, $blog_container;
 				}
 				p.addClass('active');
 				initReadMore();
-			});
+			// });
 
 			p.on("click", function(e){
 				var container = $(".container.works");
@@ -809,7 +809,7 @@ var $container, $blog_container;
 			NProgress.set(0.5);
 
 			// wait for images to be loaded
-			p.imagesLoaded(function() {
+			// p.imagesLoaded(function() {
 
 				hideLoader();
 
@@ -831,7 +831,7 @@ var $container, $blog_container;
 				}
 				p.addClass('active');
 				initReadMore();
-			});
+			// });
 
 			p.on("click", function(e){
 				var container = $(".container.page.center");
