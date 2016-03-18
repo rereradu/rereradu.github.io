@@ -96,6 +96,8 @@ var $container, $blog_container;
 		// ONE PAGE LAYOUT FUNCTIONS
 		if($('html').hasClass('one-page-layout')) {
 
+			footer = $(".site-footer");
+
 			// ------------------------------
 			// PORTFOLIO DETAILS
 			// if url contains a portfolio detail url
@@ -768,11 +770,13 @@ var $container, $blog_container;
 				setup();
 
 				if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
-				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).css({"min-height" : $("body").height()}).show();
-				$(".page-content").add(".site-footer").hide();
+					p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).show();
+					$(".page-content").hide();
+					p.append(footer);
 				} else { //old browser
 					p.fadeIn();
-					$(".page-content").add(".site-footer").hide();
+					$(".page-content").hide();
+					p.append(footer);
 				}
 				p.addClass('active');
 				initReadMore();
@@ -818,10 +822,12 @@ var $container, $blog_container;
 
 				if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
 				p.removeClass('animated '+ outAnimation + " " + inAnimation ).addClass('animated '+ inAnimation).show();
-				$(".page-content").add(".site-footer").hide();
+				$(".page-content").hide();
+				p.append(footer);
 				} else { //old browser
 					p.fadeIn();
-					$(".page-content").add(".site-footer").hide();
+					$(".page-content").hide();
+					p.append(footer);
 				}
 				p.addClass('active');
 				initReadMore();
@@ -857,11 +863,11 @@ var $container, $blog_container;
 
 		if(Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
 			pActive.removeClass('animated '+ inAnimation).addClass('animated '+ outAnimation);
-			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty().css({"min-height" : ""}); } ,500)
-			$(".page-content").add(".site-footer").show();
+			setTimeout(function() { pActive.hide().removeClass(outAnimation).empty(); } ,500)
+			$(".page-content").show().after(footer);
 		} else { //old browser
-			pActive.fadeOut().empty().css({"min-height" : ""});
-			$(".page-content").add(".site-footer").show();
+			pActive.fadeOut().empty();
+			$(".page-content").show().after(footer);
 		}
 		pActive.off("click");
 	}
