@@ -17,17 +17,17 @@
 	margin-bottom: $spacing-unit
 }
 
-.p-overlay-on #container {
- 	position: fixed;
- 	top: 0;
- 	left: 0;
- 	width: 100%;
- 	height: 100%;
- 	overflow: hidden;
- 	z-index: -1;
- 	-webkit-filter: saturate(10%);
- 	filter: saturate(10%);
-}
+// .p-overlay-on #container {
+//  	position: fixed;
+//  	top: 0;
+//  	left: 0;
+//  	width: 100%;
+//  	height: 100%;
+//  	overflow: hidden;
+//  	z-index: -1;
+//  	-webkit-filter: saturate(10%);
+//  	filter: saturate(10%);
+// }
 
 .p-overlay {
  	display: none;
@@ -39,6 +39,7 @@
  	min-height: 100%;
  	overflow: auto;
  	background: none;
+ 	padding-bottom: 95px;
 	}
 
 .button.back {
