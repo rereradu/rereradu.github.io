@@ -16,6 +16,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    text-shadow: 1px 1px 1px #000;
 
     &,
     &:visited {
@@ -34,6 +35,7 @@
     .page-link {
         color: $white-color;
         line-height: $base-line-height;
+        text-shadow: 1px 1px 1px #000;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -56,7 +58,7 @@
             width: 36px;
             height: 26px;
             line-height: 0;
-            padding-top: 10px;
+            padding-top: 5px;
             text-align: center;
 
             > svg {
@@ -82,6 +84,8 @@
         .page-link {
             display: block;
             padding: 5px 10px;
+            color: $text-color;
+            text-shadow: none;
 
             &:not(:last-child) {
                 margin-right: 0;
@@ -109,6 +113,7 @@
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
     color: $white-color;
+    text-shadow: 1px 1px 1px $text-color;
 }
 
 .contact-list,

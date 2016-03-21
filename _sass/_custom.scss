@@ -95,6 +95,10 @@
 
 .intro {
 	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	a:hover {
+		color: $white-color;
+	}
 	@at-root p#{&} {
 		margin-bottom: 2em;
 	}
@@ -116,6 +120,14 @@
 		 	transform: none;
 		 }
 	}
+}
+
+.backstretch:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.25);
+	position: absolute;
 }
 
 // .validate-form {
