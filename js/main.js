@@ -11,7 +11,7 @@ var bgLoaded = false;
 	$(function() {
 
 		if (!bgLoaded) {
-			$.backstretch("images/background.jpg");
+			$.backstretch("//" + window.location.host + "/images/background.jpg");
 			bgLoaded = true;
 		}
 
